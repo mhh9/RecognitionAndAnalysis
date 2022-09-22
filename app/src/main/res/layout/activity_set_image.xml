@@ -14,28 +14,32 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:id="@+id/selectImg"
             android:layout_marginTop="5dp"
-            android:text="select image"/>
+            android:text="select image"
+            android:background="@android:color/transparent"
+            />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/black"
+        android:background="@drawable/translate_btn_img"
         android:layout_gravity="bottom"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/translate_btn_img"
-            android:id="@+id/recognizeImgBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="저장"
+            android:background="@android:color/transparent"
+            ></Button>
 
     </LinearLayout>
 
@@ -45,17 +49,278 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="60dp"
         >
+
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/imgView"
-            android:scaleType="fitXY"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
             android:id="@+id/textView"
-            android:text=""
-            />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <!--상호명 name!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="    상호명    "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_name"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_name"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--사업자명 cpName!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="  사업자명  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_cpName"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_cpName"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--근로자명 enName!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="  근로자명  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_enName"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_enName"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--회사번호 number!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="  회사번호  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_number"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_number"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--회사주소 address!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="  회사주소  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_address"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoCorrect"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_address"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--근로개시일 start!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="근로개시일"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_start"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_start"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--급여 salary!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="      급여      "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_salary"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_salary"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--근로시간 hours!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="  근로시간  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_hours"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/add_edittext_hours"
+                    android:backgroundTint="@color/purple_200"/>
+            </LinearLayout>
+
+            <!--근무요일 days!-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="   근무요일   "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_tv_days"
+                    android:layout_marginStart="32dp"
+                    android:background="@color/purple_700"
+                    android:textColor="@color/white"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"        android:checked="false"
+                        android:text="월" android:buttonTint="#E91E63"
+                        />
+                    <CheckBox
+                        android:id="@+id/tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"        android:checked="false"
+                        android:text="화" android:buttonTint="#E91E63"
+                        />
+                    <CheckBox
+                        android:id="@+id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"        android:checked="false"
+                        android:text="수" android:buttonTint="#E91E63"
+                        />
+                    <CheckBox
+                        android:id="@+id/thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp" android:buttonTint="#E91E63"        android:checked="false"
+                        android:text="목"
+                        />
+                    <CheckBox
+                        android:id="@+id/friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"        android:checked="false"
+                        android:text="금" android:buttonTint="#E91E63"
+                        />
+                    <CheckBox
+                        android:id="@+id/saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"
+                        android:text="토"
+                        android:buttonTint="#E91E63"
+                        />
+                    <CheckBox
+                        android:id="@+id/sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"
+                        android:text="일"
+                        android:checked="false"
+                        android:buttonTint="#E91E63"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
 
 
